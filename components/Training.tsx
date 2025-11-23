@@ -1,5 +1,4 @@
-
-import React, from 'react';
+import React from 'react';
 import type { TrainingModule } from '../types';
 
 const mockTrainingModules: TrainingModule[] = [
