@@ -21,6 +21,28 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #64748b;
       }
+      /* Initial Loading Spinner */
+      #loading-spinner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #38bdf8;
+      }
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #1e293b;
+        border-top: 5px solid #38bdf8;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
     </style>
   <script type="importmap">
 {
@@ -35,7 +57,12 @@
 </script>
 </head>
   <body class="bg-slate-900 text-slate-200">
-    <div id="root"></div>
+    <div id="root">
+      <div id="loading-spinner">
+        <div class="spinner"></div>
+        <p class="font-bold text-lg">KO-DRIVE AI System Loading...</p>
+      </div>
+    </div>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
